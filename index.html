@@ -335,11 +335,51 @@
     .fade-up.visible { opacity:1; transform:translateY(0); }
 
     /* RESPONSIVE */
+    @media(max-width:1024px){
+      header { padding:0 1.2rem; }
+      nav { gap:1.1rem; }
+      nav a { font-size:.74rem; letter-spacing:.08em; }
+      section { padding:5.5rem 1.4rem 3.6rem; }
+      .about-inner { grid-template-columns:1fr; gap:2.5rem; text-align:center; }
+      .about-img-wrap { justify-content:center; }
+      .contact-inner { grid-template-columns:1fr; gap:2.2rem; }
+      .exp-card { flex:0 0 320px; padding:1.5rem; }
+      .proj-card { flex:0 0 300px; }
+    }
     @media(max-width:768px){
       nav { display:none; }
-      .about-inner { grid-template-columns:1fr; text-align:center; gap:2.5rem; }
-      .about-img-wrap { justify-content:center; }
-      .contact-inner { grid-template-columns:1fr; }
+      header { height:58px; padding:0 .85rem; }
+      .header-socials { gap:.55rem; }
+      .header-socials a { width:32px; height:32px; }
+      .header-socials svg { width:14px; height:14px; }
+      section { min-height:auto; padding:5rem 1rem 3rem; }
+      #hero { min-height:100svh; padding-top:58px; }
+      .hero-avatar { width:108px; height:108px; }
+      .hero-name { font-size:clamp(2rem,10vw,2.8rem); }
+      .hero-btns { width:100%; }
+      .btn { width:min(240px,100%); padding:.74rem 1.1rem; }
+      .scroll-hint { bottom:1.3rem; }
+      .about-avatar { width:210px; height:210px; }
+      .about-ring { width:242px; height:242px; }
+      .about-stats { grid-template-columns:1fr; }
+      .exp-scroll-wrap, .proj-scroll-wrap {
+        gap:1rem;
+        padding:.6rem .15rem 1.3rem;
+        scroll-snap-type:x mandatory;
+      }
+      .exp-card, .proj-card {
+        flex:0 0 min(88vw,340px);
+        scroll-snap-align:start;
+      }
+      .skills-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.9rem; }
+      .skill-pill { padding:1rem .6rem; }
+      .contact-item { align-items:flex-start; }
+      .contact-item-text .val {
+        font-size:.85rem;
+        word-break:break-word;
+      }
+      .form-group input, .form-group textarea { font-size:16px; }
+      footer { padding:1.5rem 1rem; }
     }
   </style>
 </head>
